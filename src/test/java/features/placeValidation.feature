@@ -16,7 +16,6 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@place
 Feature: Validate place API
   @AddPlace
   Scenario Outline: Varfiy place is being add through API.
@@ -32,7 +31,7 @@ Feature: Validate place API
    		|name|lan|add|
    		|QA|java|WTC|
    		|Automation|python|NYC|
-	@deletePlace
+	@DeletePlace
 	Scenario: Verify Delete place API is working
 		Given deletePlace payload.
 		When user calls "DeletePlaceAPI" with "Post" Http request

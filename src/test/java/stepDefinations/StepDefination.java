@@ -29,13 +29,15 @@ public class StepDefination extends Utils{
 		@When("user calls {string} with {string} Http request")
 		public void user_calls_with_http_request(String resource, String method) {
 			if(method.equals("Post"))
-				res=reqf.when().post(ResourceEnum.valueOf(resource).getResource())
+			{				res=reqf.when().post(ResourceEnum.valueOf(resource).getResource())
 						.then().spec(resf)
 							.extract().response();
+			System.out.println("test");
+			}
 			else if (method.equals("Get"))
 				res=reqf.when().get(ResourceEnum.valueOf(resource).getResource())
 				.then().spec(resf)
-					.extract().response();						
+					.extract().response();			
 				
 		}
 		
